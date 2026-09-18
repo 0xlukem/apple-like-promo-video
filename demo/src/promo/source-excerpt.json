@@ -1,0 +1,12 @@
+{
+  "file": "ProductStage.tsx",
+  "lines": [
+    "let yaw = spinYaw(",
+    "  frame,",
+    "  t.heroStart,",
+    "  t.spinEnd,",
+    "  t.finalYaw,",
+    "  t.rotationDegrees,",
+    ");"
+  ]
+}

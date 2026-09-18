@@ -1,0 +1,45 @@
+{
+  "name": "apple-like-promo-video-reference",
+  "version": "1.0.0",
+  "description": "25-second skill promo with procedural 3D product rotation and an original audiovisual score",
+  "repository": {},
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@react-three/fiber": "^9.7.0",
+    "@remotion/cli": "4.0.526",
+    "@remotion/media": "4.0.526",
+    "@remotion/tailwind-v4": "4.0.526",
+    "@remotion/three": "4.0.526",
+    "@remotion/transitions": "4.0.526",
+    "@types/three": "^0.186.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.526",
+    "tailwindcss": "4.0.0",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.526",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio --no-open",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc",
+    "render": "remotion render src/index.ts SkillPromo skill-promo.mp4 --codec=h264 --crf=17 --audio-bitrate=320k --gl=angle --concurrency=1",
+    "audio": "python3 scripts/compose-promo-audio.py",
+    "prerender": "node scripts/extract-source.mjs",
+    "predev": "node scripts/extract-source.mjs"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
